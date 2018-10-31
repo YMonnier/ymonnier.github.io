@@ -13,7 +13,6 @@ before_script:
   - gem install bundler --no-ri --no-rdoc
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
 
-
 before_script:
   - gem install bundler
 
