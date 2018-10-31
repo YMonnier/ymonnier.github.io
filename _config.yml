@@ -1,18 +1,18 @@
 # Site settings
-title: Jekyll-Uno
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://joshgerdes.com/jekyll-uno'
-baseurl: '/jekyll-uno'
+title: Ysee Monnier
+description: 'iOS Mobile Engineer & hiking/prography lover'
+url: 'http://yseemonnier.com/'
+baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
 author:
-  name: 'Josh Gerdes'
-  email: josh@joshgerdes.com
-  twitter_username: joshgerdes
-  facebook_username: joshgerdes
-  github_username:  joshgerdes
-  linkedin_username:  joshgerdes
+  name: 'Ysée Monnier'
+  email: yseemonnier@gmail.com
+  twitter_username: Ysee88
+  github_username:  YMonnier
+  linkedin_username:  yseemonnier
+  instragram_username: yseetraveller
 
 defaults:
   -
