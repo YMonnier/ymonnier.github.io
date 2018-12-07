@@ -26,3 +26,5 @@ deploy_site:
   artifacts:
     paths:
       - _site/
+  only:
+    - master
