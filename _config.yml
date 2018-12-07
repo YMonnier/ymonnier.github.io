@@ -1,0 +1,44 @@
+# http://jekyllthemes.org/themes/artist-theme/
+# Site settings
+title: Ysee Monnier
+description: 'iOS Mobile Engineer & hiking/photography lover <3'
+url: 'http://yseemonnier.com/'
+baseurl: ''
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Ysée Monnier'
+  email: yseemonnier@gmail.com
+  twitter_username: Ysee88
+  github_username:  YMonnier
+  linkedin_username:  yseemonnier
+  instragram_username: yseetraveller
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png', 'vendor']

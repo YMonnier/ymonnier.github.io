@@ -1,0 +1,30 @@
+image: ruby:2.3
+stages:
+  - deploy
+
+cache:
+  paths:
+    - vendor
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev nodejs
+  - ruby -v
+  - which ruby
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install --jobs $(nproc)  "${FLAGS[@]}"
+
+before_script:
+  - gem install bundler
+
+deploy_site:
+  stage: deploy
+  script:
+    - bundle install --path=vendor/
+    - bundle exec jekyll build
+    - apt-get update -qq && apt-get install -y -qq lftp
+    - lftp -c "set ftp:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rev _site/ ./www  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
+  artifacts:
+    paths:
+      - _site/
+  only:
+    - master
