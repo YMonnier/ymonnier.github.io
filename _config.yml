@@ -10,10 +10,9 @@ baseurl: ''
 author:
   name: 'Ysée Monnier'
   email: yseemonnier@gmail.com
-  twitter_username: Ysee88
   github_username:  YMonnier
   linkedin_username:  yseemonnier
-  instragram_username: yseetraveller
+  instragram_username: yseemonnier
 
 defaults:
   -
